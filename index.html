@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praneetha V S | Portfolio</title>
+<meta name="description" content="Portfolio of Praneetha V S, B.Tech CSE (Data Science) student at VIT Vellore.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --black:#111111; --gray-50:#F3F3F3; --gray-200:#DADADA; --gray-600:#595959; --gray-300:#BDBDBD;
+  --yellow:#FFC800;
+  --head:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{font-family:var(--body);font-size:1.0625rem;line-height:1.65;color:var(--black);background:var(--white)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--black);outline-offset:3px}
+.dark :focus-visible{outline-color:var(--yellow)}
+.wrap{max-width:62rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+
+/* Top bar */
+header.bar{position:sticky;top:0;z-index:5;background:var(--white);border-bottom:1px solid var(--gray-200)}
+header.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem}
+.brand{font-family:var(--head);font-weight:800;text-decoration:none;font-size:1.1rem}
+.brand span{display:inline-block;background:var(--yellow);padding:.05rem .45rem;margin-right:.5rem}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:600;padding:.25rem 0;border-bottom:3px solid transparent}
+nav a:hover{border-bottom-color:var(--yellow)}
+
+/* Hero */
+.hero{background:var(--black);color:var(--white);padding:clamp(4rem,10vw,7rem) 0 clamp(3.5rem,8vw,5.5rem)}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.8rem,8vw,5.5rem);line-height:1.02;letter-spacing:-.02em}
+.hero .bar-y{width:6rem;height:.6rem;background:var(--yellow);margin:1.75rem 0}
+.hero .role{font-family:var(--head);font-weight:600;font-size:1.35rem}
+.hero p{color:var(--gray-300);max-width:40rem;margin-top:1rem;font-size:1.15rem}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.6rem;font-weight:600;text-decoration:none;border:2px solid var(--yellow);border-radius:2px}
+.btn.fill{background:var(--yellow);color:var(--black)}
+.btn.line{color:var(--white)}
+.btn:hover{background:var(--white);border-color:var(--white);color:var(--black)}
+
+/* Sections */
+section.s{padding:4.5rem 0}
+section.s.alt{background:var(--gray-50)}
+h2{font-family:var(--head);font-weight:800;font-size:2rem;line-height:1.15;border-left:.55rem solid var(--yellow);padding-left:1rem;margin-bottom:2rem}
+h3{font-family:var(--head);font-weight:700;font-size:1.2rem;line-height:1.3}
+p{max-width:42rem}
+.muted{color:var(--gray-600)}
+
+/* About */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:1px;background:var(--gray-200);border:1px solid var(--gray-200);margin-top:2rem}
+.facts div{background:var(--white);padding:1.2rem 1.3rem}
+.facts b{display:block;font-family:var(--head);font-size:1.05rem}
+.facts span{color:var(--gray-600);font-size:.98rem}
+
+/* Education timeline */
+.tl{list-style:none;border-left:2px solid var(--black);margin-left:.45rem}
+.tl li{position:relative;padding:0 0 2.2rem 2rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-.62rem;top:.35rem;width:1.05rem;height:1.05rem;background:var(--yellow);border:2px solid var(--black)}
+.tl .when{font-weight:600;color:var(--gray-600);font-size:.95rem}
+.tl .inst{font-weight:600;margin-top:.1rem}
+.tl p{margin-top:.3rem;color:var(--gray-600)}
+
+/* Skills */
+.skills{display:grid;gap:1px;background:var(--gray-200);border:1px solid var(--gray-200)}
+.skill{background:var(--white);display:grid;grid-template-columns:8rem 10rem 1fr;gap:1rem;align-items:center;padding:1.15rem 1.4rem}
+.skill b{font-family:var(--head);font-size:1.1rem}
+.meter{display:flex;gap:4px}
+.meter i{flex:1;height:.7rem;background:var(--gray-200);display:block}
+.meter i.on{background:var(--yellow);box-shadow:inset 0 0 0 1px var(--black)}
+.skill span{color:var(--gray-600)}
+
+/* Contact */
+.contact{background:var(--black);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact p{color:var(--gray-300)}
+.mail{display:inline-block;margin-top:1.5rem;background:var(--yellow);color:var(--black);font-family:var(--head);font-weight:700;font-size:clamp(1.05rem,3.5vw,1.5rem);padding:1rem 1.6rem;text-decoration:none;word-break:break-all;border-radius:2px}
+.mail:hover{background:var(--white)}
+footer{background:var(--black);color:var(--gray-300);border-top:1px solid #333;padding:1.5rem 0;font-size:.9rem}
+
+@media (max-width:42rem){
+  .skill{grid-template-columns:1fr;gap:.4rem}
+  .meter{max-width:12rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span>PVS</span>Praneetha V S</a>
+    <nav aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero dark" id="top">
+  <div class="wrap">
+    <h1>Praneetha V S</h1>
+    <div class="bar-y"></div>
+    <div class="role">B.Tech Computer Science and Engineering (Data Science)</div>
+    <p>First-year student at Vellore Institute of Technology, building a strong base in programming and data science.</p>
+    <div class="btns">
+      <a class="btn fill" href="#skills">View skills</a>
+      <a class="btn line" href="#contact">Contact me</a>
+    </div>
+  </div>
+</div>
+
+<section class="s" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I am a first-year B.Tech student specialising in Data Science within Computer Science and Engineering at VIT Vellore. I program in Python, have a working knowledge of C and HTML, and have built three websites so far. I am keen to grow my skills through coursework, projects and teamwork.</p>
+    <div class="facts">
+      <div><b>Programme</b><span>B.Tech CSE, Data Science</span></div>
+      <div><b>University</b><span>VIT Vellore</span></div>
+      <div><b>Languages</b><span>Python, C, HTML</span></div>
+      <div><b>Websites built</b><span>Three</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s alt" id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <ol class="tl">
+      <li>
+        <div class="when">Present, first year</div>
+        <h3>B.Tech, Computer Science and Engineering (Data Science)</h3>
+        <div class="inst">Vellore Institute of Technology (VIT), Vellore</div>
+        <p>Undergraduate programme combining core computer science with data science.</p>
+      </li>
+      <li>
+        <div class="when">Completed</div>
+        <h3>School Education</h3>
+        <div class="inst">Adhiyaman Public School, Krishnagiri</div>
+        <p>Completed schooling before joining VIT.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="skills">
+  <div class="wrap">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="skill"><b>Python</b><div class="meter" role="img" aria-label="Working level"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><span>Working level. Programming and problem solving.</span></div>
+      <div class="skill"><b>C</b><div class="meter" role="img" aria-label="Basic level"><i class="on"></i><i></i><i></i><i></i></div><span>Basic level. Core programming concepts.</span></div>
+      <div class="skill"><b>HTML</b><div class="meter" role="img" aria-label="Basic level"><i class="on"></i><i></i><i></i><i></i></div><span>Basic level. Structuring and building web pages.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="s contact dark" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>For academic collaboration, project work or internship opportunities, write to me at:</p>
+    <a class="mail" href="mailto:praneethavs2009@gmail.com">praneethavs2009@gmail.com</a>
+  </div>
+</section>
+
+<footer class="dark">
+  <div class="wrap">&copy; 2026 Praneetha V S &middot; B.Tech CSE (Data Science), VIT Vellore</div>
+</footer>
+
+</body>
+</html>
